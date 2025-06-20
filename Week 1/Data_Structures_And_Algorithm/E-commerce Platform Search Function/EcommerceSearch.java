@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class EcommerceSearch {
-    // Category-wise product catalog
     private static final Map<String, List<String>> catalog = new HashMap<>();
 
     public static void main(String[] args) {
@@ -17,14 +16,12 @@ public class EcommerceSearch {
         input.close();
     }
 
-    // Populate product catalog by category
     private static void populateCatalog() {
         catalog.put("Electronics", List.of("Smartphone", "Laptop", "Headphones", "Tablet"));
         catalog.put("Fashion", List.of("T-Shirt", "Jeans", "Sneakers", "Wristwatch"));
         catalog.put("Groceries", List.of("Rice", "Wheat Flour", "Sugar", "Salt"));
     }
 
-    // Search products matching the keyword
     private static List<String> findMatchingProducts(String keyword) {
         List<String> results = new ArrayList<>();
         for (var category : catalog.entrySet()) {
@@ -37,7 +34,6 @@ public class EcommerceSearch {
         return results;
     }
 
-    // Display search results
     private static void displayResults(String keyword, List<String> results) {
         System.out.println();
         if (results.isEmpty()) {
