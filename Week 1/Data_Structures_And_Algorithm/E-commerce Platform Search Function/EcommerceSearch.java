@@ -7,7 +7,7 @@ public class EcommerceSearch {
         populateCatalog();
 
         Scanner input = new Scanner(System.in);
-        System.out.print("🔍 Enter a product keyword to search: ");
+        System.out.print("Enter a product keyword to search: ");
         String query = input.nextLine().trim().toLowerCase();
 
         List<String> matchedProducts = findMatchingProducts(query);
@@ -37,9 +37,9 @@ public class EcommerceSearch {
     private static void displayResults(String keyword, List<String> results) {
         System.out.println();
         if (results.isEmpty()) {
-            System.out.println(" No products found for: \"" + keyword + "\"");
+            System.out.println("No products found for: \"" + keyword + "\"");
         } else {
-            System.out.println(" Products found:");
+            System.out.println("Products found:");
             results.forEach(product -> System.out.println(" - " + product));
         }
     }
